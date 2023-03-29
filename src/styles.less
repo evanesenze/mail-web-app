@@ -1,0 +1,105 @@
+@bg-color: #424244;
+@dark-color: #282828;
+@white-color: white;
+@primary-color: #1677ff;
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ant-layout-header,
+.ant-layout-sider,
+.ant-menu-dark {
+  background-color: @dark-color !important;
+}
+
+.ant-divider {
+  border-color: @white-color;
+}
+
+.color_picker {
+  width: unset !important;
+}
+
+.header_logo {
+  margin: 0 !important;
+  user-select: none;
+  color: @primary-color !important;
+}
+
+.loading_component {
+  color: @primary-color;
+  font-size: 2rem;
+}
+
+.content_container {
+  background-color: @bg-color;
+  height: 100%;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.content_wrapper {
+  max-height: 100%;
+  overflow-y: auto;
+  border-radius: 16px;
+}
+
+.mails_list__container {
+  & .message_date {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  & .message_from {
+    font-weight: 700;
+  }
+
+  & .message_text__container {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    & .message_text__title {
+      font-weight: 700;
+    }
+  }
+
+  & .ant-table-row:hover {
+    cursor: pointer;
+  }
+
+  & .ant-table-wrapper {
+    background-color: @white-color;
+  }
+
+  & .mail_item__read {
+    background-color: rgba(0, 0, 0, 0.09);
+    font-weight: 400;
+
+    & .ant-table-cell {
+      background: unset;
+    }
+
+    & .message_date,
+    .message_text__title,
+    .message_from {
+      font-weight: 500;
+    }
+  }
+}
+
+.mail_card__container {
+  .ant-card {
+    border-radius: 0;
+    border: none;
+  }
+}
+
+.mails_controls {
+  padding: 1rem 0.5rem;
+  background-color: @white-color;
+}
